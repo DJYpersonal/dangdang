@@ -8,8 +8,18 @@
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="fonts/iconfont.css">
 </head>
 <body>
+    <div class="daohang">
+    	<ul>
+    		<li class="iconfont icon-shouye"><span >首页</span></li>
+    		<li class="iconfont icon-fenlei"><span>分类</span></li>
+    		<li class="iconfont icon-faxian"><span>发现</span></li>
+    		<li class="iconfont icon-gouwuche"><span>购物车</span></li>
+    		<li class="iconfont icon-zhongxin"><span>我的当当</span></li>
+    	</ul>
+    </div>
 	<!-- 头部 -->
 	<header id="header">
 		<div class="logo">
@@ -56,7 +66,9 @@
 				</div>
 			</div>
 			<!-- 如果需要分页器 -->
-			<div class="swiper-pagination"></div>
+			<div class="swiper-pagination">
+				
+			</div>
 		</div>
 	</div>
 	
@@ -110,6 +122,13 @@
 				<span>电子书</span>
 			</a>
 		</div>
+	</div>
+
+	<!-- 楼间推荐区 -->
+	<div class="banner">
+		<li>
+			<a href="#"><img src="image/fl-banner1.jpg" alt=""></a>
+		</li>
 	</div>	
 
 	<!-- 首页秒杀区 -->
@@ -675,13 +694,26 @@
 			<img src="image/appxiazai.jpg" alt="">
 		</a>
 	</div>
+	<!-- 返回顶部 -->
+	<div class="fixed-box">
+		<a href="#" class="back">
+			<img src="image/go-top.png" alt="" style="width:40px">
+		</a>
+	</div>
 	<!-- 底部 -->
 	<footer id="footer">
-		<div class="status bar">
+		<div class="status-bar">
 			<a href="#" class="login">登录</a>
 			<a href="#" class="signup">注册</a>
 			<a href="#" class="top">TOP</a>
 		</div>
+		<div class="bangzhu">
+			<a href="#">提建议</a>
+			<a class="red" href="#">触屏版</a>
+			<a href="#">电脑版</a>
+			<a href="#">帮&nbsp;&nbsp;助</a>
+		</div>
+		<p class="coyright">Copyright 当当 2016 m.dangdang.com</p>
 	</footer>
 </body>
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -692,7 +724,7 @@
 	var mySwiper = new Swiper ('#banner .swiper-container', {
 		direction: 'horizontal',
 		loop: true,
-
+        autoplay: 10000,
     // 如果需要分页器
     pagination: '.swiper-pagination',
     
@@ -700,6 +732,8 @@
 	var mySwipers = new Swiper('.tuiguang .swiper-container',{
 		slidesPerView : 3,
 		centeredSlides : false,
-	})     
+	}) 
+
+	/*$('.carousel').carousel(); */   
 </script>
 </html>
